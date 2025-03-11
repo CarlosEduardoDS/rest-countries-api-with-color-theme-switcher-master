@@ -179,7 +179,7 @@ main #filtrosEBarraDePesquisa .filtroFilho{
 }
 
 .bandeiras{
-    width:  220px;
+    width:  240px;
     height: 150px;
     object-fit: cover;
     border-top-left-radius: 6px;
@@ -191,7 +191,7 @@ main #filtrosEBarraDePesquisa .filtroFilho{
 
 #paisesContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 230px);
+    grid-template-columns: repeat(auto-fill, 240px);
     align-items: center;
     justify-content: center;
     row-gap: 60px;
@@ -201,7 +201,7 @@ main #filtrosEBarraDePesquisa .filtroFilho{
 
 .paises-filhos{
     height: 300px;
-    width: 220px;
+    width: 240px;
 
     background-color: hsl(209, 23%, 22%);
 
