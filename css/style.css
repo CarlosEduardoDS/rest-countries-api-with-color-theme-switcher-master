@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root{
+    --shadow: 0px 0px 10px -4px #000;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito Sans';
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: hsl(207, 26%, 17%);
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    height: 12vh;
+
+    padding-inline: 60px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: hsl(209, 23%, 22%);
+
+    box-shadow: 0px 2px 6px -3px;
+}
+
+nav h1{
+    font-size: 21px;
+    color: white;
+}
+
+#btnRecarregar{
+    background-color: #00000000;
+    border: 0;
+    cursor: pointer;
+}
+
+nav #inputCheckBoxTema{
+    display: none;
+}
+
+nav .btn-tema{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+main{
+    padding-inline: 60px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+main #filtrosEBarraDePesquisa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 110px;
+
+    position: relative;
+}
+
+main #filtrosEBarraDePesquisa #barraDePesquisa{
+    width: 350px;
+    height: 40px;
+    
+    background-color: hsl(209, 23%, 22%);
+    
+    border: 0;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    
+    padding-left: 50px;
+    cursor: pointer;
+
+    caret-color: white;
+    color: white;
+}
+
+main #filtrosEBarraDePesquisa #pesquisaBtn{
+    all: unset;
+    cursor: pointer;
+    position: relative;
+}
+
+main #filtrosEBarraDePesquisa #pesquisaIcon{
+    color: white;
+    position: absolute;
+    top: -12px;
+    left: 21px;
+}
+
+
+main #filtrosEBarraDePesquisa #barraDePesquisa::placeholder{
+    font-size: 12px;
+    color: white;
+}
+
+#barraDePesquisa.modo-claro-input::placeholder{
+    color: hsl(0, 0%, 52%) !important;
+}
+
+main #filtrosEBarraDePesquisa #filtrosBtnEOpcoes button{
+    color: white;
+}
+
+
+main #filtrosEBarraDePesquisa #btnFiltros{
+    width: 150px;
+    height: 40px;
+    
+    background-color: hsl(209, 23%, 22%);
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
+
+    padding-inline: 15px;
+    
+    border: 0;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+main #filtrosEBarraDePesquisa #filtrosPai{
+    width: 150px;
+    
+    margin-top: 10px;
+    padding-inline: 15px;
+    padding-block: 10px;
+    box-sizing: border-box;
+    
+    display: none;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+
+    position: absolute;
+
+    background-color: hsl(209, 23%, 22%);
+    
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+
+}
+
+main #filtrosEBarraDePesquisa .filtroFilho{
+    background-color: #00000000;
+    border: 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#secaoDePaginacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.bandeiras{
+    width:  220px;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    box-shadow: var(--shadow);
+
+    pointer-events: none;
+}
+
+#paisesContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    align-items: center;
+    justify-content: center;
+    row-gap: 60px;
+    column-gap: 50px;
+    
+}
+
+.paises-filhos{
+    height: 300px;
+    width: 220px;
+
+    background-color: hsl(209, 23%, 22%);
+
+    box-shadow: var(--shadow);
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+.textoPais{
+    padding-inline: 15px;
+    padding-top: 15px;
+    font-size: 14px;
+    color: white;
+    pointer-events: none;
+}
+
+.textoPais h4{
+    margin-bottom: 10px;
+}
+
+section #paginacao {
+    margin-block: 40px;
+
+    width: 260px;
+    height: 60px;
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#paginacao .btn-paginacao{
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 5px;
+    border: 0;
+    
+    
+    box-shadow: var(--shadow);
+    color: white;
+}
+
+#btnAnterior, #btnPrimeiroN, #btnTerceiroN, #btnProximo{
+    cursor: pointer;
+    background-color: hsl(209, 23%, 22%);
+}
+
+#btnSegundoN{
+    background-color: rgba(43, 57, 69, 0.3);
+}
+
+#segundaPagina{
+    display: none;
+}
+
+#btnBackSegundaPag{
+    margin-top: 40px;
+    margin-bottom: 15px;
+
+    width: 110px;
+    height: 30px;
+
+    background-color: hsl(209, 23%, 22%);
+    color: white;
+
+    box-shadow: var(--shadow);
+    border: 0;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#imagemEDescricao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#bandeiraSegundaPagina{
+    width: 42%;
+    height: 320px;
+}
+
+#descricaoSegundaPagina{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#descricaoSegundaPagina h5{
+    font-size: 22px;
+    color: white;
+}
+
+#atributosDescricao{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+#atributosDescricao .atributoFilho{
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#atributosDescricao p span{
+    color: white;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+#borderCountriesPai{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#borderCountriesPai p{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+#borderCountriesPai p:first-child{
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.borderBoxes{
+    color: white;
+    font-weight: 200;
+    font-size: 15px;
+
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: var(--shadow);
+
+    background-color: hsl(209, 23%, 22%);
+
+    border-radius: 3px;
+}
+
+.modo-claro-elementos{
+    background-color: hsl(0, 0%, 90%) !important;
+}
+
+.btnSegundoNLightMode{
+    background-color: rgba(230, 230, 230, 0.3) !important;
+
+}
+
+.modo-claro-background{
+    background-color: hsl(0, 0%, 76%) !important;
+}
+
+.modo-claro-texto{
+    color: hsl(200, 15%, 8%) !important;
+}
+
+.modo-claro-texto span{
+    font-weight: 700;
+}
+
+.modo-claro-input{
+    color: hsl(0, 0%, 52%) !important;
+}
+
+
+@media (max-width: 1080px){
+    #imagemEDescricao{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #bandeiraSegundaPagina{
+        width: 500px;
+        height: auto;
+    }
+}
+
+@media (max-width: 800px){
+    main #filtrosEBarraDePesquisa{
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        margin-block: 20px;
+    }
+
+    #imagemEDescricao{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #bandeiraSegundaPagina{
+        width: 80%;
+        height: auto;
+    }
+
+    #descricaoSegundaPagina{
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #atributosDescricao{
+        width: 400px;
+    }
+
+    #primeiraColunaAtributos, #segundaColunaAtributos {
+        width: 45%;
+    }
+
+    #borderCountriesPai{
+        grid-template-columns: 1fr 1fr;
+        width: 400px;
+        margin-bottom: 40px;
+    }
+
+    #borderCountriesPai p:first-child{
+        grid-column: span 2;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+}
+
+@media (max-width: 550px){
+    nav{
+        padding-inline: 30px;
+    }
+
+    nav h1{
+        font-size: 15px;
+    }
+
+    nav .btn-tema{
+        font-size: 12px;
+    }
+
+    #btnBackSegundaPag{
+        margin-left: 30px;
+    }
+
+    #atributosDescricao .atributoFilho{
+        font-size: 13px;
+    }
+
+    #atributosDescricao p span{
+        font-size: 12px;
+    }
+
+    main{
+        padding-inline: 10px;
+    }
+
+    #atributosDescricao{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .caixa-texto-atributos{
+        width: 240px;
+    }
+
+    #borderCountriesPai{
+        width: 100%;
+    }
+
+    #borderCountriesPai p, .borderBoxes{
+        font-size: 12px;
+    }
+
+    .textoPais{
+        font-size: 12px;
+    }
+
+    .paises-filhos{
+        height: 250px;
+        width: 200px;
+    }
+
+    .bandeiras{
+        height: 125px;
+        width: 200px;
+    }
+
+    #paisesContainer{
+        row-gap: 20px;
+        grid-template-columns: 200px;
+    }
+
+    main #filtrosEBarraDePesquisa #barraDePesquisa{
+        width: 250px;
+    }
+}
+
+@media (max-width: 424px){
+    nav{
+        padding-inline: 15px;
+        height: 10vh;
+    }
+
+    nav h1{
+        font-size: 10px;
+    }
+
+    nav .btn-tema{
+        font-size: 8px;
+    }
+
+    main #filtrosEBarraDePesquisa #barraDePesquisa{
+        width: 200px;
+    }
+
+    main #filtrosEBarraDePesquisa #pesquisaIcon{
+        top: -11px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 375px){
+    main #filtrosEBarraDePesquisa #pesquisaIcon{
+        top: -11px;
+        left: 19px;
+    }
+}

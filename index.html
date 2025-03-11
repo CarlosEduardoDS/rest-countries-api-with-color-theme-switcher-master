@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/scripts.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="elementos">
+        <button id="btnRecarregar">
+            <h1 class="elemento-texto">Where in the world?</h1>
+        </button>
+        <div id="containerCheckBox">
+            <input type="checkbox" id="inputCheckBoxTema" name="inputCheckBoxTema">
+            <label for="inputCheckBoxTema" class="btn-tema elemento-texto"><i
+                    class="far fa-moon elemento-texto"></i>Change Theme</label>
+        </div>
+    </nav>
+    <main>
+        <div id="filtrosEBarraDePesquisa">
+            <label for="nome">
+                <button id="pesquisaBtn"><i id="pesquisaIcon" class="fas fa-search imagens-elementos"></i></button>
+                <input type="text" id="barraDePesquisa" class="elementos" name="nome"
+                    placeholder="Search for a country...">
+            </label>
+            <div id="filtrosBtnEOpcoes">
+                <button id="btnFiltros" class="elementos elemento-texto">Filter by Region <i
+                        class="fas fa-chevron-down elemento-texto"></i></button>
+                <div id="filtrosPai">
+                    <button class="filtroFilho elemento-texto">All Regions</button>
+                    <button class="filtroFilho elemento-texto">Africa</button>
+                    <button class="filtroFilho elemento-texto">America</button>
+                    <button class="filtroFilho elemento-texto">Asia</button>
+                    <button class="filtroFilho elemento-texto">Europe</button>
+                    <button class="filtroFilho elemento-texto">Oceania</button>
+                </div>
+            </div>
+        </div>
+        <section id="paisesContainer">
+
+        </section>
+        <section id="secaoDePaginacao">
+            <div id="paginacao">
+                <button class="btn-paginacao elementos imagens-elementos" id="btnAnterior"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="btn-paginacao elementos elemento-texto" id="btnPrimeiroN">1</button>
+                <button class="btn-paginacao elemento-texto" id="btnSegundoN">1</button>
+                <button class="btn-paginacao elementos elemento-texto" id="btnTerceiroN">3</button>
+                <button class="btn-paginacao elementos imagens-elementos" id="btnProximo"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="segundaPagina">
+            <button id="btnBackSegundaPag"  class="elementos elemento-texto"><i class="fas fa-arrow-left"></i>Back</button>
+            <div id="imagemEDescricao">
+                <img src="https://flagcdn.com/br.svg" alt="img-pais" id="bandeiraSegundaPagina">
+                <div id="descricaoSegundaPagina">
+                    <h5 id="nomePaisSegundaPagina"  class="elemento-texto">Loading...</h5>
+                    <div id="atributosDescricao">
+                        <div id="primeiraColunaAtributos">
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Native Name: </span><span id="nativeNameSegundaPagina"  class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Population: </span><span id="populationSegundaPagina"  class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Region: </span><span id="regionSegundaPagina"  class="elemento-texto">Loading...</span>
+                            </p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Sub Region: </span><span id="subRegionSegundaPagina"  class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Capital: </span><span id="capitalSegundaPagina"  class="elemento-texto">Loading...</span></p>
+                        </div>
+                        <div id="segundaColunaAtributos">
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Top Level Domain: </span><span id="domainSegundaPagina"  class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Currencies: </span><span id="currenciesSegundaPagina"  class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Languages: </span><span id="languagesSegundaPagina"  class="elemento-texto">Loading...</span></p>
+                        </div>
+                    </div>
+                    <div id="borderCountriesPai">
+                        <p class="elemento-texto">Border Countries: </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+</body>
+
+</html>
