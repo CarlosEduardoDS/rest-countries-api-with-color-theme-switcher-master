@@ -1,6 +1,4 @@
-# Frontend Mentor - REST Countries API with color theme switcher
-
-![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
+https://carloseduardods.github.io/rest-countries-api-with-color-theme-switcher-master/
 
 ## Welcome! 👋
 
