@@ -265,7 +265,7 @@ section #paginacao {
 
 #btnBackSegundaPag{
     margin-top: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 
     width: 110px;
     height: 30px;
@@ -294,7 +294,7 @@ section #paginacao {
 
 #bandeiraSegundaPagina{
     width: 42%;
-    height: 350px;
+    height: 380px;
 }
 
 #descricaoSegundaPagina{
