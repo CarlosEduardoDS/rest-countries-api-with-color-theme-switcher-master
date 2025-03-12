@@ -83,7 +83,7 @@ const atualizarPaginacao = () => {
                 `<div data-id="${pais.alpha3Code}" class="paises-filhos elementos modo-claro-elementos">
                 <img class="bandeiras" src="${pais.flags.svg}" alt="${pais.name}">
                 <div class="textoPais modo-claro-texto">
-                <h4 class="elemento-texto modo-claro-texto">${pais.name}</h4>
+                <h3 class="elemento-texto modo-claro-texto">${pais.name}</h3>
                 <p class="elemento-texto modo-claro-texto"><span>Population:</span> ${formatarNumero(pais.population)}</p>
                 <p class="elemento-texto modo-claro-texto"><span>Region:</span> ${pais.region}</p>
                 <p class="elemento-texto modo-claro-texto"><span>Capital:</span> ${pais.capital}</p>
@@ -95,7 +95,7 @@ const atualizarPaginacao = () => {
                 `<div data-id="${pais.alpha3Code}" class="paises-filhos elementos">
                 <img class="bandeiras" src="${pais.flags.svg}" alt="${pais.name}">
                 <div class="textoPais">
-                <h4 class="elemento-texto">${pais.name}</h4>
+                <h3 class="elemento-texto">${pais.name}</h3>
                 <p class="elemento-texto"><span>Population:</span> ${formatarNumero(pais.population)}</p>
                 <p class="elemento-texto"><span>Region:</span> ${pais.region}</p>
                 <p class="elemento-texto"><span>Capital:</span> ${pais.capital}</p>
@@ -261,8 +261,4 @@ inputCheckBoxTema.on("change", function () {
     icon.toggleClass("fa-regular fa-sun");
 
     atualizarPaginacao()
-});
-
-$("#btnRecarregar").on("click", function () {
-    location.reload(); // Recarrega a página ao clicar no botão
 });
