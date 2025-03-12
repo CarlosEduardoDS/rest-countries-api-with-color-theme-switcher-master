@@ -39,9 +39,9 @@ nav h1{
 }
 
 #btnRecarregar{
-    background-color: #00000000;
-    border: 0;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
 
 nav #inputCheckBoxTema{
@@ -70,8 +70,6 @@ main #filtrosEBarraDePesquisa{
     align-items: center;
     
     height: 110px;
-
-    position: relative;
 }
 
 main #filtrosEBarraDePesquisa #barraDePesquisa{
@@ -91,17 +89,20 @@ main #filtrosEBarraDePesquisa #barraDePesquisa{
     color: white;
 }
 
+main #filtrosEBarraDePesquisa #pesquisa-container{
+    position: relative;
+}
+
 main #filtrosEBarraDePesquisa #pesquisaBtn{
     all: unset;
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    top: 10px;
+    left: 17px;
 }
 
 main #filtrosEBarraDePesquisa #pesquisaIcon{
     color: white;
-    position: absolute;
-    top: -12px;
-    left: 21px;
 }
 
 
@@ -161,6 +162,7 @@ main #filtrosEBarraDePesquisa #filtrosPai{
     border-radius: 5px;
     box-shadow: var(--shadow);
 
+    list-style: none;
 }
 
 main #filtrosEBarraDePesquisa .filtroFilho{
@@ -179,7 +181,7 @@ main #filtrosEBarraDePesquisa .filtroFilho{
 }
 
 .bandeiras{
-    width:  240px;
+    width:  220px;
     height: 150px;
     object-fit: cover;
     border-top-left-radius: 6px;
@@ -191,7 +193,7 @@ main #filtrosEBarraDePesquisa .filtroFilho{
 
 #paisesContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
+    grid-template-columns: repeat(auto-fill, 230px);
     align-items: center;
     justify-content: center;
     row-gap: 60px;
@@ -201,7 +203,7 @@ main #filtrosEBarraDePesquisa .filtroFilho{
 
 .paises-filhos{
     height: 300px;
-    width: 240px;
+    width: 220px;
 
     background-color: hsl(209, 23%, 22%);
 
@@ -220,7 +222,7 @@ main #filtrosEBarraDePesquisa .filtroFilho{
     pointer-events: none;
 }
 
-.textoPais h4{
+.textoPais h3{
     margin-bottom: 10px;
 }
 
@@ -243,14 +245,13 @@ section #paginacao {
     
     border-radius: 5px;
     border: 0;
-    
-    
+     
     box-shadow: var(--shadow);
     color: white;
+    cursor: pointer;
 }
 
 #btnAnterior, #btnPrimeiroN, #btnTerceiroN, #btnProximo{
-    cursor: pointer;
     background-color: hsl(209, 23%, 22%);
 }
 
@@ -303,7 +304,7 @@ section #paginacao {
     gap: 25px;
 }
 
-#descricaoSegundaPagina h5{
+#descricaoSegundaPagina h2{
     font-size: 22px;
     color: white;
 }
@@ -548,17 +549,5 @@ section #paginacao {
 
     main #filtrosEBarraDePesquisa #barraDePesquisa{
         width: 200px;
-    }
-
-    main #filtrosEBarraDePesquisa #pesquisaIcon{
-        top: -11px;
-        left: 20px;
-    }
-}
-
-@media (max-width: 375px){
-    main #filtrosEBarraDePesquisa #pesquisaIcon{
-        top: -11px;
-        left: 19px;
     }
 }
