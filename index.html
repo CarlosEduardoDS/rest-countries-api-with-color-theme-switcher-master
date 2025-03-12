@@ -16,9 +16,7 @@
 
 <body>
     <nav class="elementos">
-        <button id="btnRecarregar">
-            <h1 class="elemento-texto">Where in the world?</h1>
-        </button>
+        <h1 class="elemento-texto"><a href="/" id="btnRecarregar">Where in the world?</a></h1>
         <div id="containerCheckBox">
             <input type="checkbox" id="inputCheckBoxTema" name="inputCheckBoxTema">
             <label for="inputCheckBoxTema" class="btn-tema elemento-texto"><i
@@ -27,22 +25,26 @@
     </nav>
     <main>
         <div id="filtrosEBarraDePesquisa">
-            <label for="nome">
-                <button id="pesquisaBtn"><i id="pesquisaIcon" class="fas fa-search imagens-elementos"></i></button>
-                <input type="text" id="barraDePesquisa" class="elementos" name="nome"
+            <div id="pesquisa-container">
+                <label for="barraDePesquisa" class="label-invisivel"></label>
+                <input type="text" id="barraDePesquisa" class="elementos" name="barraDePesquisa"
                     placeholder="Search for a country...">
-            </label>
+                <button id="pesquisaBtn" aria-label="Pesquisar">
+                    <i id="pesquisaIcon" class="fas fa-search imagens-elementos"></i>
+                </button>
+            </div>
+
             <div id="filtrosBtnEOpcoes">
                 <button id="btnFiltros" class="elementos elemento-texto">Filter by Region <i
                         class="fas fa-chevron-down elemento-texto"></i></button>
-                <div id="filtrosPai">
-                    <button class="filtroFilho elemento-texto">All Regions</button>
-                    <button class="filtroFilho elemento-texto">Africa</button>
-                    <button class="filtroFilho elemento-texto">America</button>
-                    <button class="filtroFilho elemento-texto">Asia</button>
-                    <button class="filtroFilho elemento-texto">Europe</button>
-                    <button class="filtroFilho elemento-texto">Oceania</button>
-                </div>
+                <ul id="filtrosPai">
+                    <li><button class="filtroFilho elemento-texto">All Regions</button></li>
+                    <li><button class="filtroFilho elemento-texto">Africa</button></li>
+                    <li><button class="filtroFilho elemento-texto">America</button></li>
+                    <li><button class="filtroFilho elemento-texto">Asia</button></li>
+                    <li><button class="filtroFilho elemento-texto">Europe</button></li>
+                    <li><button class="filtroFilho elemento-texto">Oceania</button></li>
+                </ul>
             </div>
         </div>
         <section id="paisesContainer">
@@ -61,24 +63,34 @@
         </section>
 
         <section id="segundaPagina">
-            <button id="btnBackSegundaPag"  class="elementos elemento-texto"><i class="fas fa-arrow-left"></i>Back</button>
+            <button id="btnBackSegundaPag" class="elementos elemento-texto" aria-label="voltarParaPaginaInicial"><i
+                    class="fas fa-arrow-left"></i>Back</button>
             <div id="imagemEDescricao">
                 <img src="https://flagcdn.com/br.svg" alt="img-pais" id="bandeiraSegundaPagina">
                 <div id="descricaoSegundaPagina">
-                    <h5 id="nomePaisSegundaPagina"  class="elemento-texto">Loading...</h5>
+                    <h2 id="nomePaisSegundaPagina" class="elemento-texto">Loading...</h2>
                     <div id="atributosDescricao">
                         <div id="primeiraColunaAtributos">
-                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Native Name: </span><span id="nativeNameSegundaPagina"  class="elemento-texto">Loading...</span></p>
-                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Population: </span><span id="populationSegundaPagina"  class="elemento-texto">Loading...</span></p>
-                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Region: </span><span id="regionSegundaPagina"  class="elemento-texto">Loading...</span>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Native Name:
+                                </span><span id="nativeNameSegundaPagina" class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Population:
+                                </span><span id="populationSegundaPagina" class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Region:
+                                </span><span id="regionSegundaPagina" class="elemento-texto">Loading...</span>
                             </p>
-                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Sub Region: </span><span id="subRegionSegundaPagina"  class="elemento-texto">Loading...</span></p>
-                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Capital: </span><span id="capitalSegundaPagina"  class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Sub Region:
+                                </span><span id="subRegionSegundaPagina" class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Capital:
+                                </span><span id="capitalSegundaPagina" class="elemento-texto">Loading...</span></p>
                         </div>
                         <div id="segundaColunaAtributos">
-                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Top Level Domain: </span><span id="domainSegundaPagina"  class="elemento-texto">Loading...</span></p>
-                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Currencies: </span><span id="currenciesSegundaPagina"  class="elemento-texto">Loading...</span></p>
-                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Languages: </span><span id="languagesSegundaPagina"  class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Top Level
+                                    Domain: </span><span id="domainSegundaPagina"
+                                    class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Currencies:
+                                </span><span id="currenciesSegundaPagina" class="elemento-texto">Loading...</span></p>
+                            <p class="caixa-texto-atributos"><span class="atributoFilho elemento-texto">Languages:
+                                </span><span id="languagesSegundaPagina" class="elemento-texto">Loading...</span></p>
                         </div>
                     </div>
                     <div id="borderCountriesPai">
